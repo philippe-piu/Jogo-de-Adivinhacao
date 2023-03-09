@@ -5,6 +5,7 @@ int main(){
 	int numerosecreto = 42;
 	int chuteusuario = 0;
 	int acertou = 0;
+	int maior = 0;
 	//Imprime o cabeçalho do nosso jogo seguindo as aulas da Alura;
 	printf("******************************************\n");
 	printf("* Bem vindo ao nosso jogo de adivinhacao *\n");
@@ -26,12 +27,13 @@ int main(){
 		printf("*Parabens voce acertou o numero secreto e %d*\n",numerosecreto);
 		printf("*********************************************\n");
 	}else{
-		if(chuteusuario > numerosecreto){
+		maior = (chuteusuario > numerosecreto);
+		if(maior){
 			printf("\n******************************************\n");
 			printf("*Seu chute foi maior que o numero secreto*\n");
 			printf("******************************************\n");
 
-		}else if(chuteusuario < numerosecreto){
+		}else{
 			printf("\n******************************************\n");
 			printf("*Seu chute foi menor que o numero secreto*\n");
 			printf("******************************************\n");
