@@ -44,7 +44,8 @@ int main()
 			printf("*********************************************\n");
 			//Parando o Loop
 			break;
-		}else if(maior)
+		}
+		else if(maior)
 		{
 			printf("\n**********************************************************\n");
 			printf("*Seu chute foi maior que o numero secreto tente novamente*\n");
