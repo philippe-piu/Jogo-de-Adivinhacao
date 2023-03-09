@@ -13,8 +13,9 @@ int main()
     printf("* Bem vindo ao nosso jogo de adivinhacao *\n");
     printf("******************************************\n");
 	
-	//Loopde repetição
-    for(i = 0; i < 3; i++){
+	//Loop de repetição
+    for(i = 0; i < 3; i++)
+	{
 	    printf("\n*****************************************************************************\n");
         printf("*Qual e o seu chute para descobrir o numero secreto escondido pela maquina? *");
         printf("\n*Seu numero de chances para jogar sao 3 vezes                               *");
@@ -32,6 +33,8 @@ int main()
             printf("\n*********************************************\n");
             printf("*Parabens voce acertou o numero secreto e %d*\n",numerosecreto);
             printf("*********************************************\n");
+            //Parando o Loop 
+            break;
         }
         else
         {
