@@ -7,29 +7,35 @@ int main()
 	int chuteusuario = 0;
 	int acertou = 0;
 	int maior = 0;
-	int i = 0;
-	int numerotentativas = 0;
+	int tentativas = 1;
+	int vencedor = 0;
+	
 	//Imprime o cabeçalho do nosso jogo seguindo as aulas da Alura;
 	printf("******************************************\n");
 	printf("* Bem vindo ao nosso jogo de adivinhacao *\n");
 	printf("******************************************\n");
 	printf("\n***********************************************************************************");
-	printf("\n*Quantas vezes voce gostaria de tentar acertar o numero secreto da nossa maquina ?*\n");
-	printf("***********************************************************************************\n");
-	scanf("%d", &numerotentativas);
-	printf("\n**************************************************");
-	printf("\n*Seu numero de chances para jogar sao %d vezes *", numerotentativas);
-	printf("\n**************************************************\n");
+	
 
 	//Loop de repetição
-	for(i = 0; i < numerotentativas; i++)
-	{
+	while(1){
 		printf("\n*****************************************************************************\n");
-		printf("*Tentativa %d de %d *\n", i, numerotentativas);
+		printf("*Tentativa %d  *\n", tentativas);
 		printf("*Qual e o seu chute para descobrir o numero secreto escondido pela maquina? *");
 		printf("\n*****************************************************************************\n");
 		scanf("%d", &chuteusuario);
-		printf("******************************************\n");
+		
+		//Condição para o usuário não pode colocar números negaivos
+		if(chuteusuario < 0){
+			printf("\n*********************************************************\n");
+			printf("*Caro usuario voce nao pode informar numeros negativos !*\n");
+			printf("*********************************************************\n");
+			//Continue para execução desse bloco de código e e faz voltar a funcionar e vai para proxima interação do loop
+			continue;
+		}
+		
+		//Mostra o valor informado pelo o usuário
+		printf("\n******************************************\n");
 		printf("*Numero informado pelo usuario e %d      *\n", chuteusuario);
 		printf("******************************************\n");
 
@@ -42,7 +48,7 @@ int main()
 			printf("\n*********************************************\n");
 			printf("*Parabens voce acertou o numero secreto e %d*\n", numerosecreto);
 			printf("*********************************************\n");
-			//Parando o Loop
+			//vencedor se for = 1 me tira do loop e finaliza o programa
 			break;
 		}
 		else if(maior)
@@ -58,10 +64,15 @@ int main()
 			printf("*Seu chute foi menor que o numero secreto tente novamente*\n");
 			printf("**********************************************************\n");
 		}
-
-
+		
+		//Conta o numero de tentativas do usuário
+		tentativas ++;
 	}
-
+	
+	printf("\n********************************\n");
+	printf("*Fim do Jogo !                 *\n");
+	printf("**Voce acertou em %d tentativas**\n",tentativas);
+	printf("********************************\n");
 
 
 	return(0);
