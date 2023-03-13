@@ -1,5 +1,6 @@
 #include<stdio.h>
 
+//Jogo de Adivinhação
 int main()
 {
 	//Número secreto definido para a máquina
@@ -8,7 +9,6 @@ int main()
 	int acertou = 0;
 	int maior = 0;
 	int tentativas = 1;
-	int vencedor = 0;
 	
 	//Imprime o cabeçalho do nosso jogo seguindo as aulas da Alura;
 	printf("******************************************\n");
@@ -48,7 +48,6 @@ int main()
 			printf("\n*********************************************\n");
 			printf("*Parabens voce acertou o numero secreto e %d*\n", numerosecreto);
 			printf("*********************************************\n");
-			//vencedor se for = 1 me tira do loop e finaliza o programa
 			break;
 		}
 		else if(maior)
