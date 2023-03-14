@@ -28,6 +28,7 @@ int main()
 	printf("******************************************\n");
 	printf("\n***********************************************\n");
 
+	//Loop de repetição para o usuário poder escolher novamente um nivel caso tenha informado uma opção não existente no jogo
 	do
 	{
 		printf("*Qual o nivel de dificuldade voce quer jogar ?*\n");
@@ -73,10 +74,6 @@ int main()
 
 	}
 	while((niveljogo != 1) && (niveljogo != 2) && (niveljogo != 3));
-
-
-
-
 
 
 	//Loop de repetição
@@ -137,14 +134,15 @@ int main()
 	printf("\n******************************************\n");
 	printf("*           Fim de Jogo !                *\n");
 	printf("******************************************\n");
-
+	printf("\n");
+	
 	if(acertou)
 	{
 		printf("*********************************************\n");
 		printf("*Parabens voce acertou o numero secreto e %d*\n", numerosecreto);
 		printf("*********************************************\n");
 		printf("\n******************************************\n");
-		printf("*****  Voce acertou em %d tentativas  *****\n", tentativas);
+		printf("*****  Voce acertou em %d tentativas  ****\n", tentativas);
 		printf("*Total de pontos feitos %.1lf            *\n", pontos);
 		printf("******************************************\n");
 	}
@@ -154,8 +152,6 @@ int main()
 		printf("*      Voce errou tente novamente        *\n");
 		printf("******************************************\n");
 	}
-
-
 
 
 	return(0);
