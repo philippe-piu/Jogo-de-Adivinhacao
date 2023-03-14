@@ -26,11 +26,11 @@ int main()
 	printf("******************************************\n");
 	printf("* Bem vindo ao nosso jogo de adivinhacao *\n");
 	printf("******************************************\n");
-	printf("\n***********************************************\n");
 
 	//Loop de repetição para o usuário poder escolher novamente um nivel caso tenha informado uma opção não existente no jogo
 	do
 	{
+		printf("***********************************************\n");
 		printf("*Qual o nivel de dificuldade voce quer jogar ?*\n");
 		printf("*     Digite (1)Facil (2)Medio (3)Dificil     *\n");
 		printf("***********************************************\n");
@@ -68,13 +68,13 @@ int main()
 			printf("**************************************************************\n");
 			printf("*Tente novamente suas escolhas de nivel e de somente de 1 2 3*\n");
 			printf("**************************************************************\n");
+			printf("\n");
 			break;
 
 		}
 
 	}
 	while((niveljogo != 1) && (niveljogo != 2) && (niveljogo != 3));
-
 
 	//Loop de repetição
 	for(i = 1; i <= numtentativas; i++)
@@ -85,6 +85,7 @@ int main()
 		printf("\n*****************************************************************************\n");
 		scanf("%d", &chuteusuario);
 		system("cls");
+
 		//Condição para o usuário não pode colocar números negaivos
 		if(chuteusuario < 0)
 		{
@@ -131,11 +132,12 @@ int main()
 		double pontosperdidos = abs(chuteusuario - numerosecreto) / 2.0;
 		pontos = pontos - pontosperdidos;
 	}
+
 	printf("\n******************************************\n");
 	printf("*           Fim de Jogo !                *\n");
 	printf("******************************************\n");
 	printf("\n");
-	
+
 	if(acertou)
 	{
 		printf("*********************************************\n");
@@ -152,7 +154,6 @@ int main()
 		printf("*      Voce errou tente novamente        *\n");
 		printf("******************************************\n");
 	}
-
 
 	return(0);
 }
